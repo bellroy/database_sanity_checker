@@ -1,2 +1,3 @@
 require 'database_sanity_checker/version'
-require 'database_sanity_checker/rspec'
+require 'database_sanity_checker/deleted_at_unique_indexes'
+require 'database_sanity_checker/validations_for_constraints'
