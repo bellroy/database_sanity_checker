@@ -1,8 +1,6 @@
 # DatabaseSanityChecker
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/database_sanity_checker`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Common database sanity checks.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to write specs that calls the necessary shared example by the description:
+
+```ruby
+# frozen_string_literal: true
+
+require 'rails_helper'
+require 'database_sanity_checker'
+
+describe 'Unique indexes' do
+  include_examples 'Unique indexes do not include deleted_at'
+end
+
+```
 
 ## Development
 
@@ -32,4 +42,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/sadhu89/database_sanity_checker.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tricycle/database_sanity_checker.git.

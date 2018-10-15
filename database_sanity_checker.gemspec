@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['support@trikeapps.com']
 
   spec.summary       = 'Common database sanity checks.'
-  spec.description   = 'Performs database sanity checks across all the projects'
+  spec.description   = 'Performs database sanity checks across all the projects.'
   spec.homepage      = 'https://bellroy.com'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
