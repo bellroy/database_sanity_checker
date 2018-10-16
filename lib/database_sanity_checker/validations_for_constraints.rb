@@ -20,7 +20,7 @@ class IndexValidatorHelper
   end
 end
 
-shared_examples 'ActiveRecord validations exist for each database constraint', :aggregate_failures do
+RSpec.shared_examples 'ActiveRecord validations exist for each database constraint', :aggregate_failures do
   before do
     Rails.application.eager_load!
   end

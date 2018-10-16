@@ -4,7 +4,7 @@ def unique_indexes(model)
   ApplicationRecord.connection.indexes(model.table_name).select(&:unique)
 end
 
-shared_examples 'Unique indexes do not include deleted_at', :aggregate_failures do
+RSpec.shared_examples 'Unique indexes do not include deleted_at', :aggregate_failures do
   specify do
     ApplicationRecord.descendants.each do |model|
       unique_indexes(model).each do |unique_index|
