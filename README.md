@@ -7,7 +7,7 @@ Common database sanity checks.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'database_sanity_checker'
+gem 'database_sanity_checker', require: false
 ```
 
 And then execute:
