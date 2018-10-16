@@ -102,7 +102,7 @@ RSpec.shared_examples 'ActiveRecord validations exist for each database constrai
           columns_names = index.columns
         end
 
-        columns_to_check = columns_names.map(&:to_sym)
+        columns_to_check = columns_names.map(&:to_sym) - [:deleted_at]
 
         uniqueness_validator = model.validators_on(*columns_to_check).find do |validator|
           validator_fields = validator.attributes
