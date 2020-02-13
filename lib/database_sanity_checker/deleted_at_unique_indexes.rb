@@ -16,7 +16,7 @@ RSpec.shared_examples 'unique index sanity checks' do
     sql = <<~SQL
       SELECT i.tablename, i.indexname
       FROM information_schema.columns c
-      INNER JOIN pg_indexes i ON c.table_name = i.tablename
+      INNER JOIN pg_indexes i ON c.table_schema = i.schemaname AND c.table_name = i.tablename
       WHERE column_name = 'deleted_at'
       AND indexdef NOT LIKE '%btree (id)'
       AND indexdef LIKE 'CREATE UNIQUE INDEX%'
