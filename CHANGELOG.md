@@ -1,5 +1,9 @@
 # CHANGELOG
 
+1.0.2
+
+* Just ensure deleted_at IS NULL is _somewhere_ in the partial index condition
+
 1.0.1
 
 * Include schema name in join to stop getting false positives

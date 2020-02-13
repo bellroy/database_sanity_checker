@@ -20,7 +20,7 @@ RSpec.shared_examples 'unique index sanity checks' do
       WHERE column_name = 'deleted_at'
       AND indexdef NOT LIKE '%btree (id)'
       AND indexdef LIKE 'CREATE UNIQUE INDEX%'
-      AND indexdef NOT LIKE '% WHERE (deleted_at IS NULL)';
+      AND indexdef NOT LIKE '% WHERE %(deleted_at IS NULL)%';
     SQL
     records = ActiveRecord::Base.connection.execute sql
     output = records.map do |record|
