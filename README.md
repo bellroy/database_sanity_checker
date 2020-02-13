@@ -29,7 +29,7 @@ require 'rails_helper'
 require 'database_sanity_checker'
 
 describe 'Unique indexes' do
-  include_examples 'Unique indexes do not include deleted_at'
+  include_examples 'unique index sanity checks'
 end
 
 ```
