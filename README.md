@@ -1,3 +1,6 @@
+THIS GEM IS NOW DEPRECATED. PLEASE DO NOT USE.
+---
+
 # DatabaseSanityChecker
 
 Common database sanity checks.
